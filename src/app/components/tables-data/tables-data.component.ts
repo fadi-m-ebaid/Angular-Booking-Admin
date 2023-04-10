@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
 export class TablesDataComponent {
   Hotels: IHotel[] = [];
   newHotel: IHotel = {} as IHotel;
+  
+
   constructor(private hotelserv: HotelapiService, private router: Router) {}
 
   ngOnInit(): void {
@@ -21,7 +23,7 @@ export class TablesDataComponent {
 
   deleteHotel(id: string) {
     this.hotelserv.deleteHotelById(id).subscribe((data: any) => {
-      this.Hotels = data;
+    this.ngOnInit();
     });
   }
 }

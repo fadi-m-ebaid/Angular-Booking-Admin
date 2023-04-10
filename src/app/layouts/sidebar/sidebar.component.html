@@ -1,9 +1,9 @@
-<aside id="sidebar" class="sidebar">
-    <ul class="sidebar-nav" id="sidebar-nav">
-       <li class="nav-item"> <a class="nav-link " routerLink="/dashboard"> <i class="bi bi-grid"></i> <span>Dashboard</span> </a></li>
-       <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i> </a>
-          <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+<aside id="sidebar" class="sidebar text-light" style="background-color: #003b95;">
+    <ul class="sidebar-nav text-light" id="sidebar-nav" >
+       <li class="nav-item text-light"> <a class="nav-link"  routerLink="/dashboard"> <i class="bi bi-grid"></i> <span>Dashboard</span> </a></li>
+       <li class="nav-item text-light">
+          <a class="nav-link collapsed"  data-bs-target="#components-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+          <ul id="components-nav" style="margin-left: 400px;"  class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li> <a routerLink="/addnewuser"> <i class="bi bi-circle"></i><span>Users</span> </a></li>
              <li> <a routerLink="/alerts"> <i class="bi bi-circle"></i><span>Alerts</span> </a></li>
              <li> <a routerLink="/accordion"> <i class="bi bi-circle"></i><span>Accordion</span> </a></li>
@@ -21,7 +21,7 @@
              <li> <a routerLink="/tooltips"> <i class="bi bi-circle"></i><span>Tooltips</span> </a></li>
           </ul>
        </li>
-       <li class="nav-item">
+       <li class="nav-item" >
           <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i> </a>
           <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
              <li> <a routerLink="/form-elements"> <i class="bi bi-circle"></i><span>Form Elements</span> </a></li>
@@ -34,7 +34,8 @@
           <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
              <li> <a routerLink="/tables-general"> <i class="bi bi-circle"></i><span>General Tables</span> </a></li>
              <li> <a routerLink="/tables-data"> <i class="bi bi-circle"></i><span>Data Tables</span> </a></li>
-          </ul>
+             <li> <a routerLink="/newhotel"> <i class="bi bi-circle"></i><span>Add New Hotel</span> </a></li>
+            </ul>
        </li>
        <li class="nav-item">
           <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i> </a>

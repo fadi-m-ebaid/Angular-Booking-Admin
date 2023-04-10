@@ -40,7 +40,7 @@ export class HotelapiService {
   postHotel(hotels: IHotel): Observable<IHotel> {
     return this.httpClient.post<IHotel>(
       `${environment.APIBaseURL}/hotels`,
-      JSON.stringify(hotels)
+      JSON.stringify(hotels), this.httpOptionsHeders
     );
   }
 }

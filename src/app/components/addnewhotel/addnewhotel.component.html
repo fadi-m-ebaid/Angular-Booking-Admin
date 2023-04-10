@@ -40,6 +40,18 @@
     </div>
   </div>
   <div class="row mb-3">
+    <label for="name" class="col-sm-2 col-form-label">City name</label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="form-control"
+        [(ngModel)]="newHotel.city"
+      />
+    </div>
+  </div>
+  <div class="row mb-3">
     <label for="Latitute" class="col-sm-2 col-form-label"
       >location(Latitute)</label
     >
@@ -198,6 +210,13 @@
     >
       Edit
     </button>
+    <button
+    type="button"
+    class="btn btn-danger"
+    (click)="AddHotel()"
+  >
+    add
+  </button>
   </div>
 </form>
 <h1>{{ newHotel | json }}</h1>

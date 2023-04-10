@@ -12,20 +12,25 @@
   <div>{{ Hotels[0].name }}</div>
   <section class="section">
     <div class="row">
-      <div class="col-lg-12">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Datatables</h5>
-            <p>Add lightweight datatables to your project.</p>
-            <table class="table">
-              <thead>
+      <div class="col-lg-12 container" >
+        <div class="card "   style="width:fit-content; " >
+          <div class="card-body" >
+            <h5 class="card-title table-body">Datatables</h5>
+  
+            <table class="table table-body " >
+              <thead >
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">img</th>
                   <th scope="col">Name</th>
                   <th scope="col">City</th>
-                  <th scope="col">Availability</th>
-                  <th scope="col">SSRoomPrice</th>
+                  <th scope="col">Available</th>
+                  <th scope="col">RoomPrice</th>
+                  <th scope="col">Edit</th>
+                  <th scope="col">Delete</th>
+                 
+               
+                  
                 </tr>
               </thead>
               <tbody>
@@ -40,18 +45,22 @@
                     <img [src]="hotel.HotelImg" width="200" height="100" />
                   </td>
                   <td>{{ hotel.name }}</td>
-                  <td>{{ hotel.Address.City }},{{ hotel.Address.Country }}</td>
+                  <td>{{ hotel.Address.City }},
+                    <br>
+                    {{ hotel.Address.Country }}</td>
                   <td>{{ hotel.Availability }}</td>
                   <td>{{ hotel.SSRoomPrice | currency : "EGP " }}</td>
                   <!-- <td>{{ hotel.SSRoomPrice | currency: 'USD':'symbol'}}</td> -->
                   <td>
-                    <button
+                    <button 
                       type="button"
                       class="btn btn-warning"
                       routerLink="/editHotel/{{ hotel._id }}"
                     >
                       Edit
                     </button>
+                  </td>
+                  <td>
                     <button
                       type="button"
                       class="btn btn-danger"
@@ -59,6 +68,7 @@
                     >
                       Delete
                     </button>
+                    
                   </td>
                 </tr>
               </tbody>

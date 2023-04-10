@@ -33,7 +33,7 @@ import { IconsBootstrapComponent } from './components/icons-bootstrap/icons-boot
 import { IconsRemixComponent } from './components/icons-remix/icons-remix.component';
 import { IconsBoxiconsComponent } from './components/icons-boxicons/icons-boxicons.component';
 import { UsersProfileComponent } from './pages/users-profile/users-profile.component';
-import { PagesFaqComponent } from './pages/pages-faq/pages-faq.component';
+
 import { PagesContactComponent } from './pages/pages-contact/pages-contact.component';
 import { PagesRegisterComponent } from './pages/pages-register/pages-register.component';
 import { PagesLoginComponent } from './pages/pages-login/pages-login.component';
@@ -42,6 +42,8 @@ import { PagesBlankComponent } from './pages/pages-blank/pages-blank.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddnewuserComponent } from './components/addnewuser/addnewuser.component';
 import { AddnewhotelComponent } from './components/addnewhotel/addnewhotel.component';
+import { NewHotelComponent } from './components/new-hotel/new-hotel.component';
+
 
 @NgModule({
   declarations: [
@@ -75,14 +77,15 @@ import { AddnewhotelComponent } from './components/addnewhotel/addnewhotel.compo
     IconsRemixComponent,
     IconsBoxiconsComponent,
     UsersProfileComponent,
-    PagesFaqComponent,
     PagesContactComponent,
     PagesRegisterComponent,
     PagesLoginComponent,
     PagesError404Component,
     PagesBlankComponent,
    AddnewuserComponent,
-   AddnewhotelComponent
+   AddnewhotelComponent,
+   NewHotelComponent,
+
 
   ],
   imports: [

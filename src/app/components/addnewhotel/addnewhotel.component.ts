@@ -9,21 +9,16 @@ import { HotelapiService } from 'src/app/services/hotelapi.service';
   styleUrls: ['./addnewhotel.component.css']
 })
 export class AddnewhotelComponent {
-  newHotel: any = {};
+  newHotel: IHotel = {} as IHotel;
+  
   id = this.activatedRoute.snapshot.params['id']
   constructor(private hotelserv: HotelapiService, private activatedRoute: ActivatedRoute,    private router: Router) { }
 
   ngOnInit(): void {
-
-
         this.hotelserv.getHotelById(this.id).subscribe((data:{}) => {
           this.newHotel = data
     });
   }
-
-
-
-
   editHotel() {
     this.hotelserv.patchHotelById(this.id, this.newHotel).subscribe({ next: (newHotel) => {
           console.log(newHotel);
@@ -34,6 +29,15 @@ export class AddnewhotelComponent {
         },
       });
   }
+  AddHotel() {
+  
+    this.hotelserv.postHotel(this.newHotel).subscribe(data=> {this.newHotel=data
+         
+          this.router.navigate(['/tables-data'])
+      
+      });
+  }
+
 
 }
 
