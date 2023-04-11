@@ -1,17 +1,17 @@
 export interface IHotel {
   _id: string;
-  CityId?: string;
-  name?: string;
-  city?: String;
-  country?: String;
+  CityId: string;
+  name: string;
+  city: String;
+  country: String;
   location?: number[];
   Address: {
-    Country?: string;
-    City?: string;
-    Street?: string;
+    Country: string;
+    City: string;
+    Street: string;
   };
  
-  Facilities?: {
+  Facilities: {
     MostPopularFacilities?: string[];
     MoreFacilities?: {};
   };

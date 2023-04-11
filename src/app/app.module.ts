@@ -43,6 +43,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddnewuserComponent } from './components/addnewuser/addnewuser.component';
 import { AddnewhotelComponent } from './components/addnewhotel/addnewhotel.component';
 import { NewHotelComponent } from './components/new-hotel/new-hotel.component';
+import { AdminsComponent } from './components/admins/admins.component';
 
 
 @NgModule({
@@ -85,6 +86,7 @@ import { NewHotelComponent } from './components/new-hotel/new-hotel.component';
    AddnewuserComponent,
    AddnewhotelComponent,
    NewHotelComponent,
+   AdminsComponent,
 
 
   ],

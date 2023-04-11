@@ -9,33 +9,35 @@ import { HotelapiService } from 'src/app/services/hotelapi.service';
   styleUrls: ['./addnewhotel.component.css']
 })
 export class AddnewhotelComponent {
-  newHotel: IHotel = {} as IHotel;
-  
+  newHotel: any = {} as IHotel;
+
   id = this.activatedRoute.snapshot.params['id']
-  constructor(private hotelserv: HotelapiService, private activatedRoute: ActivatedRoute,    private router: Router) { }
+  constructor(private hotelserv: HotelapiService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-        this.hotelserv.getHotelById(this.id).subscribe((data:{}) => {
-          this.newHotel = data
+    this.hotelserv.getHotelById(this.id).subscribe((data: {}) => {
+      this.newHotel = data
     });
   }
   editHotel() {
-    this.hotelserv.patchHotelById(this.id, this.newHotel).subscribe({ next: (newHotel) => {
-          console.log(newHotel);
-          this.router.navigate(['/tables-data']);
-        },
-        error: (err) => {
-          console.log(err);
-        },
-      });
+    this.hotelserv.patchHotelById(this.id, this.newHotel).subscribe({
+      next: (newHotel) => {
+        console.log(newHotel);
+        this.router.navigate(['/tables-data']);
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
   }
   AddHotel() {
-  
-    this.hotelserv.postHotel(this.newHotel).subscribe(data=> {this.newHotel=data
-         
-          this.router.navigate(['/tables-data'])
-      
-      });
+
+    this.hotelserv.postHotel(this.newHotel).subscribe(data => {
+      this.newHotel = data
+
+      this.router.navigate(['/tables-data'])
+
+    });
   }
 
 

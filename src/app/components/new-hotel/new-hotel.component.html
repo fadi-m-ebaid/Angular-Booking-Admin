@@ -16,7 +16,7 @@
           <div class="card-body">
             <h5 class="card-title">Add New Hotel</h5>
 
-            <form (ngSubmit)="AddHotel()">
+            <form #hotelForm="ngForm" (ngSubmit)="AddHotel(hotelForm)">
 
               <div class="row mb-3">
                 <label for="name" class="col-sm-2  ">name</label>
@@ -25,45 +25,40 @@
                 </div>
 
               </div>
-              <!-- <div class="row mb-3">
+              <div class="row mb-3">
                 <label for="CityId" class="col-sm-2  ">CityId</label>
                 <div class="col-sm-10">
-                  <input
-                    type="text"
-                    id="CityId"
-                    name="CityId"
-                    class="form-control"
-                    [(ngModel)]="newHotel.CityId"
-                  />
-                </div>
-              </div> -->
-              <div class="row mb-3">
-                <label for="Country" class="col-sm-2  ">Country </label>
-                <div class="col-sm-10">
-                  <input class="form-control" type="text" id="Country" name="Country"
-                    [(ngModel)]="newHotel.Address.Country" />
+                  <input type="text" id="CityId" name="CityId" class="form-control" [(ngModel)]="newHotel.CityId" />
                 </div>
               </div>
-              <div class="row mb-3">
-                <label for="City" class="col-sm-2  ">City </label>
-                <div class="col-sm-10">
-                  <input class="form-control" type="text" id="City" name="City" [(ngModel)]="newHotel.Address.City" />
+              <div ngModelGroup="Address">
+                <div class="row mb-3">
+                  <label for="Country" class="col-sm-2  ">Country </label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="Country" name="Country" ngModel />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="City" class="col-sm-2  ">City </label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="City" name="City" ngModel />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Street" class="col-sm-2  ">Street </label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" id="Street" name="Street" ngModel />
+                  </div>
                 </div>
               </div>
-              <div class="row mb-3">
-                <label for="Street" class="col-sm-2  ">Street </label>
-                <div class="col-sm-10">
-                  <input class="form-control" type="text" id="Street" name="Street"
-                    [(ngModel)]="newHotel.Address.Street" />
-                </div>
-              </div>
-              <div class="row mb-3">
+             
+              <!-- <div ngModelGroup="Facilities" class="row mb-3">
                 <label for="Facilities" class="col-sm-2  ">Facilities</label>
                 <div class="col-sm-10">
-                  <input type="text" id="Facilities" class="form-control" [(ngModel)]="newHotel.Facilities"
-                    name="Facilities" />
+                  <input type="text" id="Facilities" class="form-control" ngModel
+                    name="MoreFacilities" />
                 </div>
-              </div>
+              </div> -->
               <div class="row mb-3">
                 <label for="SSRoomPrice" class="col-sm-2  ">SSRoomPrice</label>
                 <div class="col-sm-10">
@@ -93,14 +88,14 @@
                     [(ngModel)]="newHotel.HotelImg" />
                 </div>
               </div>
-              <div class="row mb-3">
+              <!-- <div class="row mb-3">
                 <label for="HotelImages" class="col-sm-2  ">Hotel Images</label>
                 <div class="col-sm-10">
 
                   <input type="text" id="HotelImages" name="HotelImages" class="form-control"
                     [(ngModel)]="newHotel.HotelImages" />
                 </div>
-              </div>
+              </div> -->
               <div class="row mb-3">
                 <label for="HotelInfo" class="col-sm-2  ">HotelInfo</label>
                 <div class="col-sm-10">

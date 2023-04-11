@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 import { ActivatedRoute, Router } from '@angular/router';
 import { IHotel } from 'src/app/models/ihotel';
@@ -18,9 +19,9 @@ export class NewHotelComponent {
   // ngOnInit(): void {
        
   // }
-  AddHotel() {
-  
-    this.hotelserv.postHotel(this.newHotel).subscribe(data=> {this.newHotel=data
+  AddHotel(form:NgForm) {
+    console.log(form.value)
+    this.hotelserv.postHotel(form.value).subscribe(data=> {this.newHotel=data
          
           this.router.navigate(['/tables-data'])
       
