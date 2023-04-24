@@ -18,7 +18,7 @@ export interface IHotel {
   SSRoomPrice?: number;
   Availability?: boolean;
   HotelDescription?: string;
-  HotelImg?: string;
+  HotelImg: string;
   HotelImages?: string[];
   HotelInfo?: {
     HotelPhoneNum?: number[];

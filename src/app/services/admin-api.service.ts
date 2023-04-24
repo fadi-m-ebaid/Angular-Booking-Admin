@@ -24,5 +24,17 @@ export class AdminApiService {
     return this.httpClient.get<IAdmin[]>(`${environment.APIBaseURL}/Admins`);
   }
 
+  getAdminById(id:string):Observable<IAdmin>{
+    return this.httpClient.get<IAdmin>(`${environment.APIBaseURL}/Admins/${id}`);
+  }
+
+  patchAdmins(id: string | null, admin: IAdmin): Observable<IAdmin> {
+    return this.httpClient.patch<IAdmin>(
+      `${environment.APIBaseURL}/Admins/${id}`,
+      JSON.stringify(admin),
+      this.httpOptionHeaders
+    );
+  }
+
 
 }

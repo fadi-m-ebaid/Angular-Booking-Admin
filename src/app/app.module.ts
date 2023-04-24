@@ -44,6 +44,7 @@ import { AddnewuserComponent } from './components/addnewuser/addnewuser.componen
 import { AddnewhotelComponent } from './components/addnewhotel/addnewhotel.component';
 import { NewHotelComponent } from './components/new-hotel/new-hotel.component';
 import { AdminsComponent } from './components/admins/admins.component';
+import { EditAdminComponent } from './components/edit-admin/edit-admin.component';
 
 
 @NgModule({
@@ -87,6 +88,7 @@ import { AdminsComponent } from './components/admins/admins.component';
    AddnewhotelComponent,
    NewHotelComponent,
    AdminsComponent,
+   EditAdminComponent,
 
 
   ],
