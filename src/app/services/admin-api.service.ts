@@ -14,18 +14,22 @@ export class AdminApiService {
   constructor(private httpClient: HttpClient) {
 
     this.httpOptionHeaders = {
-      headers: new HttpHeaders ({
+      headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     }
   }
 
-  getAllAdmins():Observable<IAdmin[]>{
+  getAllAdmins(): Observable<IAdmin[]> {
     return this.httpClient.get<IAdmin[]>(`${environment.APIBaseURL}/Admins`);
   }
 
-  getAdminById(id:string):Observable<IAdmin>{
+  getAdminById(id: string): Observable<IAdmin> {
     return this.httpClient.get<IAdmin>(`${environment.APIBaseURL}/Admins/${id}`);
+  }
+
+  addAdmin(admin:IAdmin):Observable<IAdmin>{
+    return this.httpClient.post<IAdmin>(`${environment.APIBaseURL}/Admins`,JSON.stringify(admin),this.httpOptionHeaders)
   }
 
   patchAdmins(id: string | null, admin: IAdmin): Observable<IAdmin> {

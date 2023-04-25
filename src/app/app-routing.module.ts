@@ -36,6 +36,7 @@ import { AddnewhotelComponent } from './components/addnewhotel/addnewhotel.compo
 import { NewHotelComponent } from './components/new-hotel/new-hotel.component';
 import { AdminsComponent } from './components/admins/admins.component';
 import { EditAdminComponent } from './components/edit-admin/edit-admin.component';
+import { AddAdminComponent } from './components/add-admin/add-admin.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -45,6 +46,7 @@ const routes: Routes = [
   { path: 'editHotel/:id', component: AddnewhotelComponent },
   { path: 'admins', component: AdminsComponent },
   { path: 'editAdmin/:id', component: EditAdminComponent },
+  { path: 'addAdmin', component: AddAdminComponent },
   { path: 'alerts', component: AlertsComponent },
   { path: 'accordion', component: AccordionComponent },
   { path: 'badges', component: BadgesComponent },
