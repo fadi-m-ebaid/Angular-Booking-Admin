@@ -1,3 +1,4 @@
+
 <main id="main" class="main">
     <div class="pagetitle">
         <h1>Data Tables</h1>
@@ -5,7 +6,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
                 <li class="breadcrumb-item">Tables</li>
-                <li class="breadcrumb-item active">Admins</li>
+                <li class="breadcrumb-item active">users</li>
             </ol>
         </nav>
     </div>
@@ -22,45 +23,47 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Name</th>
-                                    <th scope="col">Address</th>
+                                  
                                     <th scope="col">Email</th>
                                     <th scope="col">Phone No.</th>
-                                    <th scope="col">Date of Birth</th>
+                                    <th scope="col">Activity Status</th>
                                     <th scope="col">Edit</th>
-                                    <th scope="col">Delete</th>
+                                    <!-- <th scope="col">Delete</th> -->
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let admin of Admins; let i = index">
+                                <tr *ngFor="let user of Users; let i = index">
                                     <th scope="row">{{ i + 1 }}</th>
                                     <!-- <td>
-                      <img [src]="admin.adminImg" width="200" height="100" />
+                      <img [src]="user.userImg" width="200" height="100" />
                     </td> -->
-                                    <td>{{ admin.adminName }}</td>
-                                    <td>{{ admin.adminAddress }}</td>
-                                    <td>{{ admin.adminEmail }}</td>
-                                    <td>{{ admin.adminPhone }}</td>
-                                    <td>{{ admin.dob }}</td>
+                                    <td>{{ user.userName }}</td>
+                              
+                                    <td>{{ user.userEmail }}</td>
+                                    <td>{{ user.userPhone }}</td>
+                                    <td class="text-center">{{ user.isActive }}</td>
+                                  
                                     <!-- <td>{{ hotel.SSRoomPrice | currency: 'USD':'symbol'}}</td> -->
                                     <td> 
                       <button 
+                        (click)="toggelActivity(user._id)"
                         type="button"
-                        class="btn btn-warning"
-                        routerLink="/editAdmin/{{ admin._id }}"
+                        class="btn btn-danger"
+                
                       >
-                        Edit
+                       Change Activity
                       </button>
                     </td> 
-                    <td>        
+                                    <!-- <td>
                       <button
                         type="button"
                         class="btn btn-danger"
-                        (click)="deleteAdmin(admin._id)"
+                        (click)="deleteHotel(hotel._id)"
                       >
                         Delete
                       </button>
-                    </td> 
-                    
+                      
+                    </td> -->
                                 </tr>
                             </tbody>
                         </table>

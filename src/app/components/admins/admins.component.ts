@@ -20,5 +20,9 @@ export class AdminsComponent {
       console.log(this.Admins);
     });
   }
-
+  deleteAdmin(id: string) {
+    this.adminApi.deleteAdminById(id).subscribe((data: any) => {
+    this.ngOnInit();
+    });
+  }
 }

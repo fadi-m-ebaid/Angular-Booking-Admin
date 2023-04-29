@@ -37,11 +37,12 @@ import { NewHotelComponent } from './components/new-hotel/new-hotel.component';
 import { AdminsComponent } from './components/admins/admins.component';
 import { EditAdminComponent } from './components/edit-admin/edit-admin.component';
 import { AddAdminComponent } from './components/add-admin/add-admin.component';
+import { UsersComponent } from './components/users/users.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'addnewuser', component: AddnewuserComponent },
+  { path: 'displayUsers1', component: AddnewuserComponent },
   { path: 'newhotel', component: NewHotelComponent },
   { path: 'editHotel/:id', component: AddnewhotelComponent },
   { path: 'admins', component: AdminsComponent },
@@ -77,6 +78,8 @@ const routes: Routes = [
   { path: 'pages-login', component: PagesLoginComponent },
   { path: 'pages-register', component: PagesRegisterComponent },
   { path: 'user-profile', component: UsersProfileComponent },
+  { path: 'displayUsers', component: UsersComponent },
+  
 ];
 
 @NgModule({
