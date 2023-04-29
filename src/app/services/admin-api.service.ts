@@ -39,6 +39,10 @@ export class AdminApiService {
       this.httpOptionHeaders
     );
   }
-
+  deleteAdminById(id: string | null): Observable<IAdmin> {
+    return this.httpClient.delete<IAdmin>(
+      `${environment.APIBaseURL}/Admins/${id}`
+    );
+  }
 
 }

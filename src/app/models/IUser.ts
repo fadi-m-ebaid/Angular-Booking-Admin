@@ -1,5 +1,5 @@
 export interface IUser {
-    id?:number;
+    _id?:number;
   userName: String;
 
   userPassword: String;
@@ -10,8 +10,9 @@ export interface IUser {
 
   userAddress: String;
 
-  dob?: Date | undefined ;
+  isActive: boolean;
+ 
 
-  timestamps?: Date | undefined ;
+  
  
 }

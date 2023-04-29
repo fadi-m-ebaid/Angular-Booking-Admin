@@ -38,7 +38,7 @@ export class UserapiService {
 
 
    updateUserById(user: IUser , userID:number):Observable< IUser>{
-    return this.httpClient.patch< IUser>(` ${environment.APIBaseURL}/users/${userID}`,JSON.stringify(user) , this.httpOptionsHeders );
+    return this.httpClient.patch<IUser>(` ${environment.APIBaseURL}/users/${userID}`,JSON.stringify(user) , this.httpOptionsHeders );
    }
 
    deleteUserById(userID:number):Observable< IUser>{
